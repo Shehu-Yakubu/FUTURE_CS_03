@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure File Sharing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Secure File Upload & Download</h1>
+
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="file" required>
+            <button type="submit">Upload & Encrypt</button>
+        </form>
+
+        <h2>📂 Encrypted Files</h2>
+        <ul class="file-list">
+            {% for file in files %}
+                <li>
+                    <span>{{ file.replace('.enc', '') }}</span>
+                    <a href="{{ url_for('download', filename=file) }}" class="btn">Download</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
