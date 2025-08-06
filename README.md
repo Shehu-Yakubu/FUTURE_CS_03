@@ -31,5 +31,5 @@ Pull requests are welcome!
 Whether it's bug fixes, interface improvements, or better encryption practices, let's collaborate securely.
 
 ## 🧠 Developer
-  Shehu Yakubu
-   📍FCT Abuja, Nigeria
+- Shehu Yakubu
+- 📍FCT Abuja, Nigeria
